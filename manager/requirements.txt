@@ -1,0 +1,5 @@
+pystache
+psutil
+natsort
+pathlib
+prettytable
