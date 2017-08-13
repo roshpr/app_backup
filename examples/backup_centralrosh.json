@@ -1,0 +1,103 @@
+{
+  "config": {
+    "node`": "centralrosh", 
+    "snapshot_name": "2017-07-11T03:56:21", 
+    "backup_name": "daily", 
+    "snapshot_time": 1499745381
+  }, 
+  "components": {
+    "redis": {
+      "path": "/var/lib/redis", 
+      "supports": [
+        "backup", 
+        "restore"
+      ], 
+      "role": "member", 
+      "backup": "success", 
+      "pre_backup": "success"
+    }, 
+    "zookeeper": {
+      "path": "/var/lib/zookeeper", 
+      "supports": [
+        "backup", 
+        "restore"
+      ], 
+      "role": "member", 
+      "backup": "success", 
+      "pre_backup": "success"
+    }, 
+    "arangodb": {
+      "pre_backup": "success", 
+      "backup": "success", 
+      "role": "master", 
+      "user": "root", 
+      "path": "/data/arangodb", 
+      "password": "passw0rd", 
+      "supports": [
+        "backup", 
+        "restore"
+      ], 
+      "port": 8529
+    }, 
+    "elasticsearch": {
+      "pre_backup": "success", 
+      "backup": "success", 
+      "role": "master", 
+      "indices": [
+        "a", 
+        "b"
+      ], 
+      "path": "/data/elasticsearch", 
+      "supports": [
+        "backup", 
+        "restore"
+      ]
+    }, 
+    "etcd": {
+      "path": "/var/etcd", 
+      "supports": [
+        "backup", 
+        "restore"
+      ], 
+      "role": "master", 
+      "backup": "success", 
+      "pre_backup": "success"
+    }, 
+    "mariadb": {
+      "excludes": [
+        "*.exclude", 
+        "/data/mariadb/exclude"
+      ], 
+      "pre_backup": "success", 
+      "backup": "success", 
+      "role": "master", 
+      "user": "root", 
+      "path": "/data/mariadb", 
+      "password": "passw0rd", 
+      "supports": [
+        "backup", 
+        "restore"
+      ]
+    }, 
+    "swift": {
+      "path": "/srv/node/swiftstorage1", 
+      "supports": [
+        "backup", 
+        "restore"
+      ], 
+      "role": "member", 
+      "backup": "success", 
+      "pre_backup": "success"
+    }, 
+    "cassandra": {
+      "path": "/var/lib/cassandra", 
+      "supports": [
+        "backup", 
+        "restore"
+      ], 
+      "role": "member", 
+      "backup": "success", 
+      "pre_backup": "success"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+server: 127.0.0.1
+
+node_port: 7777
+node_protocol: http
+
+name: backup
+keep: 2
+store: ~/backup
+user: root
+nodes:
+    - name: local
+      host: 127.0.0.1
+      user: root
+      cluster: local
+
+components:
+#    mariadb:
+#        path: /data/mariadb
+#        user: root
+#        password: passw0rd
+#        excludes:
+#            - '*.exclude'
+#            - /data/mariadb/exclude
+#    elasticsearch:
+#        path: /data/elasticsearch
+#        indices:
+#          - a
+#          - b
+    cassandra:
+        path: /home/prakasid/tools/cassandra/data
+#    arangodb:
+#        path: /data/arangodb
+#        user: root
+#        password: passw0rd
+#        port: 8529
+#        role: master
+#    etcd:
+#        path: /var/etcd
+#        role: member
+#    redis:
+#        path: /var/lib/redis
+#    zookeeper:
+#        path: /var/lib/zookeeper
+#    swift:
+#        path: /srv/node/swiftstorage1

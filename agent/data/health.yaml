@@ -1,0 +1,12 @@
+components:
+    cassandra:
+      usage: good
+    elasticsearch:
+      usage: good
+    mysql:
+      usage: good
+
+system:
+    cpu: 20
+    memory: 10
+    disk: 10GB

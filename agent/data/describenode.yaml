@@ -1,0 +1,16 @@
+components:
+    cassandra:
+      role: member
+      supports: [backup, restore]
+    elasticsearch:
+      role: master
+      supports: [backup]
+    mysql:
+      role: slave
+      supports: [backup, restore]
+
+config:
+    hostname: host1
+    ip: 127.0.0.1
+    time: current time
+    data: arbitary data that client wants to store
